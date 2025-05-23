@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araba Modifikasyon Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="models/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen">
+    <div class="spinner"></div>
+    <p class="loading-text"> ...YÜKLENİYOR...</p>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    <p class="developer-text">Developed and designed by İbrahim YÜKSEL</p>
+</div>
+
+    <div id="background-container"></div>
+    <div id="scene-container"></div>
+
+    <div id="controls">
+        <div class="brand-selection">
+            <h3>Araba Seçenekleri</h3>
+            <div class="brand-logos">
+                <div class="brand-option active" data-model="bmw_m5_e34.glb">
+                    <img src="models/bmw_logo.png" alt="BMW">
+                    <span>BMW M5</span>
+                </div>
+                <div class="brand-option" data-model="toyota_gt_86.glb">
+                    <img src="models/toyota_logo.png" alt="Toyota">
+                    <span>TOYOTA GT-86</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="customization-section">
+            <h3>Spoiler Seçenekleri</h3>
+            <div class="option-buttons" id="spoiler-options">
+                <div class="option-button active" data-value="">Stok</div>
+                <div class="option-button" data-value="bmw_spoiler.glb">Bmw Spoiler</div>
+                <div class="option-button" data-value="toyota_gt_86_spoiler.glb">Toyota Spoiler</div>
+            </div>
+        </div>
+
+        <div class="customization-section">
+            <h3>Side Skirts Seçenekleri</h3>
+            <div class="option-buttons" id="side-skirts-options">
+                <div class="option-button active" data-value="">Stok</div>
+                <div class="option-button" data-value="bmw_sideSkirts.glb">Bmw Side Skirts</div>
+                <div class="option-button" data-value="toyota_gt_86_sideSkirts.glb">Toyota Side Skirts</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="color-palette">
+        <h3>Araç Rengi</h3>
+        <div class="color-grid" id="color-buttons"></div>
+        <div class="custom-color">
+            <label for="custom-color">Özel Renk</label>
+            <input type="color" id="custom-color" value="#FF0000">
+        </div>
+    </div>
+
+    <div id="sosyal-icons">
+        <a href="https://github.com/ibrahimyksl55" target="_blank" class="sosyal-icon">
+            <i class="fab fa-github"></i>
+            <span class="username">ibrahimyksl55</span>
+        </a>
+        <a href="https://instagram.com/ibrahimyuksel._55" target="_blank" class="sosyal-icon">
+            <i class="fab fa-instagram"></i>
+            <span class="username">ibrahimyuksel._55</span>
+        </a>
+        <a href="#" class="sosyal-icon" id="mail-icon">
+            <i class="fas fa-envelope"></i>
+            <span class="username">İletişim</span>
+        </a>
+    </div>
+
+    <div id="contact-form" style="display: none;">
+        <form action="https://formspree.io/f/manozzab" method="POST">
+            <input type="text" name="name" placeholder="Adınız" required>
+            <input type="email" name="email" placeholder="E-posta" required>
+            <textarea name="message" placeholder="Mesajınız" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="three.js"></script>
+</body>
+</html>
